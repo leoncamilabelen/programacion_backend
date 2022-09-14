@@ -1,0 +1,16 @@
+{"level":"warn","message":"ruta /, método GET no implementada"}
+{"level":"warn","message":"ruta /favicon.ico, método GET no implementada"}
+{"level":"warn","message":"ruta /favicon.ico, método GET no implementada"}
+{"level":"warn","message":"ruta /favicon.ico, método GET no implementada"}
+{"level":"warn","message":"ruta /a, método GET no implementada"}
+{"level":"warn","message":"ruta /alguna, método GET no implementada"}
+{"level":"warn","message":"ruta /a, método GET no implementada"}
+{"level":"warn","message":"ruta /alguna, método GET no implementada"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'user')"}
+{"level":"warn","message":"ruta /favicon.ico, método GET no implementada"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'user')"}
+{"level":"warn","message":"ruta /login/views_hbs/products.hbs, método GET no implementada"}
+{"level":"warn","message":"ruta /login/views_hbs/chat.hbs, método GET no implementada"}
+{"level":"warn","message":"ruta /a, método GET no implementada"}
+{"level":"warn","message":"ruta /login/views_hbs/products.hbs, método GET no implementada"}
+{"level":"warn","message":"ruta /login/views_hbs/chat.hbs, método GET no implementada"}

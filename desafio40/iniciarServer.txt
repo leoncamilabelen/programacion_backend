@@ -1,0 +1,21 @@
+iniciar el servidor en modo FORK
+
+node server  -modo FORK -p <nro de puerto>
+node server   -p <nro de puerto>
+
+
+iniciar el servidor en modo Cluster
+
+node server  -modo CLUSTER -p <nro de puerto>
+
+Sume un archivo ".env_copia" para hacerte llegar de manera mas practica las variables de entorno  
+
+INICIAR EL SERVIDOR CON PRODUCTOS EN BASE DE DATOS MONGO
+-t mongo
+-type mongo
+
+INICIAR EL SERVIDOR CON PRODUCTOS FAKE 
+-type fake
+-t fake
+
+si no se coloca ninguna variable es mongo por default 
