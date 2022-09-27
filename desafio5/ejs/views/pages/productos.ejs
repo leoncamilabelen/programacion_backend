@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('../partials/head.ejs');%>
+</html>
+<body>
+  <h1><%-titulo%></h1>
+  <% if (hayProductos){%>
+  <table>
+    <thead>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Imagen</th>
+    </thead>
+    <% arrayProductos.forEach(function(val) { %>
+    <tbody>
+      <tr>
+        <td><%= val.title %></td>
+        <td><%= val.price %></td>
+        <td><img src='<%= val.thumbnail %>' alt='<%=val.title%>'></td>
+      </tr>
+    </tbody>
+
+    <% }); %>
+  </table>
+  <% } else {%>
+    <h3>No existen Productos</h3>
+    <% } %>
+    <form action="productos/formulario" method="get">
+        <input type="submit" value="Cargar Productos">
+    </form>
+</body>

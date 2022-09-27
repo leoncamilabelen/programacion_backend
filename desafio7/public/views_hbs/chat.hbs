@@ -1,0 +1,11 @@
+{{#if hayMensajes}}
+{{#each messagesList}}
+<div class="messagesStyle">
+<p class="emailStyle">{{this.eMail}}</p>
+<p class="dateStyle">{{this.date}}</p>
+<p class="textStyle">{{this.text}}</p>
+</div>
+{{/each}}
+{{else}}
+<strong>No hay mensajes</strong>
+{{/if}}

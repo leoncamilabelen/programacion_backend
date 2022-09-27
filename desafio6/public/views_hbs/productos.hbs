@@ -1,0 +1,44 @@
+<h1>{{titulo}}</h1>
+
+<form class="productForm" onsubmit="return cargarProducto()">
+  <label for="title">Nombre</label><input
+    type="text"
+    id="title"
+    required="required"
+  />
+  <label for="price">Precio</label><input
+    type="number"
+    id="price"
+    required="required"
+  />
+  <label for="thumbnail">Url imagen</label><input
+    type="text"
+    id="thumbnail"
+    required="required"
+  />
+  <input type="submit" value="Cargar Producto" />
+</form>
+
+<h1>{{titulo}}</h1>
+<table>
+  <thead>
+    <th>Nombre</th>
+    <th>Precio</th>
+    <th>Foto</th>
+  </thead>
+  <tbody id="lista">
+    {{#each arrayProductos}}
+      <tr>
+        <td>{{this.title}}</td>
+        <td>{{this.price}} </td>
+        <td><img src="{{this.thumbnail}}" alt="{{this.title}}"> </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+<form class="chatContainer" onsubmit="return sendMessage()">
+<label for="eMail">e-mail</label>  <input type="email" id="eMail" required="required">
+<div id="chat"></div>
+<input type="text" id="messageText"> 
+<input type="submit" value="Enviar"/>
+</form>

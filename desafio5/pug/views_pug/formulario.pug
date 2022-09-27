@@ -1,0 +1,15 @@
+extends layout.pug 
+block formulario 
+    h1=titulo
+    form(action="/api/productos" method="post")
+        label(for="nombre") Nombre
+            input(type="text" name="nombre" required="required")
+        label(for="precio") Precio
+            input(type="number" name="precio" required="required")
+        label(for="imagen") Url imagen
+            input(type="text" name="imagen" required="required")
+        input(type="submit" value="Cargar Producto" )
+    
+    form(action="/api/productos" method="get")
+      input(type="submit" value="ver productos")
+    

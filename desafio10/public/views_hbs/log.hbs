@@ -1,0 +1,12 @@
+{{#if in}}
+  <form action="/" method="post">
+    <label for="text"> ingrese nombre de usuario</label>
+    <input type="text" name="nombre" id="nombre" required="required" />
+    <input type="submit" value="ingresar" />
+  </form>
+{{else}}
+  <h1 id="salir"> Hasta luego {{nombre}}</h1>
+<script>    setTimeout(() => {
+        window.location.assign('/log_in')
+    }, 3000);</script>
+{{/if}}

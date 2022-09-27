@@ -1,0 +1,14 @@
+{{porcentaje}}
+
+{{#if hayMensajes}}
+{{#each messagesList}}
+<div class="messagesStyle">
+<p class="emailStyle">{{this.author.id}}</p>
+<p class="dateStyle">{{this.author.timestamp}}</p>
+<p class="textStyle">{{this.texto}}</p>
+<img src="{{this.author.avatar}}" alt="avatar"/>
+</div>
+{{/each}}
+{{else}}
+<strong>No hay mensajes</strong>
+{{/if}}

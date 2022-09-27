@@ -1,0 +1,21 @@
+extends layout.pug
+block mostrarProductos
+    h1=titulo
+    if hayProductos
+        table 
+            thead
+                tr 
+                    th Nombre
+                    th Precio
+                    th Imagen 
+            tbody 
+                each val in arrayProductos
+                    tr      
+                        td=val.title 
+                        td=val.price
+                        td 
+                            img(src=val.thumbnail alt=val.title)
+        form(action="/api/productos/formulario" method="get")
+            input(type="submit" value="Agregar Producto") 
+    else
+        h2 No hay productos en existencia

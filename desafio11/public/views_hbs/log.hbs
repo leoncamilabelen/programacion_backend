@@ -1,0 +1,16 @@
+{{#if in}}
+  <form action="/login" method="post">
+    <label for="username"> ingrese e-mail</label>
+    <input type="email" name="username" id="nombre" required="required" />
+    <label for="password">Contraseña</label>
+    <input type="password" name="password" id="password" />
+    <input type="submit" value="ingresar" />
+  </form>
+  <form action="/registro">
+    <input type="submit" value="registrarse" />
+  </form>
+{{else}}
+  <h1 id="salir"> Hasta luego {{nombre}}</h1>
+  <script>
+    setTimeout(() => { window.location.assign('/login') }, 3000);</script>
+{{/if}}
