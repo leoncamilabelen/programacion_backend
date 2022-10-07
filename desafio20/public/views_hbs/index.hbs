@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>{{titulo}}</h1>
+    <h3>Agregar productos</h3>
+    <form action="/api/productos" method="post">
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" />
+      <label for="precio">Precio</label>
+      <input type="number" name="precio" />
+      <label for="imagen">imagen</label>
+      <input type="text" name="imagen" />
+      <input type="submit" value="Guardar Producto" />
+    </form>
+    <div class="productos__todos--order">
+      {{#each products}}
+        <div class="card__producto--style"><img
+            src="{{this.imagen}}"
+            alt="{{this.nombre}}"
+            class="imagen__producto--size"
+          />
+          <h5>{{this.nombre}}</h5>
+          <strong>${{this.precio}}</strong>
+          <form action="/api/productos/{{this.id}}" method="get">
+            <input type="submit" value="ver" />
+            <input type="button" value="ver todos" id="verTodos">
+          </form>
+        </div>
+      {{/each}}
+    </div>
+    <script>document.getElementById('verTodos').addEventListener('click', () => {
+    window.location.assign('/api/productos')
+})</script>
+  </body>
+</html>
